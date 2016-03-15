@@ -20,7 +20,7 @@ var BindInput = React.createClass({displayName:'bindInput',
     getInitialState: function(){
         return {message: 'Hello!'};
     },
-    handleChange: function(event){
+    handleChange: function(){
         let message = this.refs.test.value;
         this.setState({message});
     },
