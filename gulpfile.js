@@ -74,9 +74,8 @@ gulp.task('js',function(){
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
-        .pipe(gulp.dest(jsDst))
-        .pipe(rename({suffix:'.min'}))
         .pipe(uglify())
+        .pipe(rename({suffix:'.min'}))
         //.pipe(livereload(server))
         .pipe(gulp.dest(jsDst));
 });
@@ -89,9 +88,8 @@ gulp.task('react',function(){
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
         .pipe(concat('reactlist.js'))
-        .pipe(gulp.dest('./dist/js'))
-        .pipe(rename({suffix:'.min'}))
         .pipe(uglify())
+        .pipe(rename({suffix:'.min'}))
         .pipe(gulp.dest('./dist/js'));
 });
 

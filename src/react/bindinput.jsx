@@ -21,17 +21,17 @@ var BindInput = React.createClass({displayName:'bindInput',
         return {message: 'Hello!'};
     },
     handleChange: function(event){
-        let message = event.target.value;
+        let message = this.refs.test.value;
         this.setState({message});
     },
     render: function(){
         var message = this.state.message;
         return (
             <div>
-                <input type = "text" value={message} onChange={this.handleChange}/>
+                <input type = "text" value={message} ref='test' onChange={this.handleChange}/>
                 <p>{message}</p>
             </div>
-        );
+        );t
     }
 });
 
